@@ -1,17 +1,12 @@
+/* This section are universal and general settings for CSS.
 
-/* General Settings For All Elements
 - Setting box sizing to border box to set pad/margin with w/o adding to width. Reset and zero out margin/pad 
 - Made the main body a flex item and gave it a height
-- Removed styling from lists, changed to flex item, and added spacing
-- Removed all style and changed link color
 - Adgusted overall line spacing for text and increased margin
 - Made header and footer flex containers to center and align
 - Spaced out the images with margins on T&B
-- Made the body a flexbox so everything can be a flex item. I also made my main, 
-which i think i can actually get rid of, a flexbox so my remaining sections can be flex items.
-From there, I set the flex value at 1 1 0 for the items so they can automatically take up all the remainingg size.
+- Made the body a flexbox so everything can be a flex item.
 */
-
 :root {
   --color: #D9D0CB;
   --color2nd: #A83145;
@@ -20,9 +15,9 @@ From there, I set the flex value at 1 1 0 for the items so they can automaticall
 
 * {
   box-sizing: border-box;
-  /* padding: 0; */
-  /* margin: 0; */
-  /* No need to add these as I already have border-box set. Cataloguing mistakes for learning.*/
+  padding: 0;
+  margin: 0;
+ 
 }
 
 a {
@@ -70,8 +65,9 @@ img {
 1. Placed navbox in its own container to be centered vs stretched to both ends
 2. Gave it a max width so it wouldn't stretch too far.
 3. Gave it a maximum height and then set the background
-4. Added margins to the left of the logo and right of the UL */
-
+4. Added margins to the left of the logo and right of the UL 
+5. Removed styling from lists, changed to flex item, and added spacing
+*/
 .navbar {
   background-color: var(--color2nd);
 }
@@ -133,9 +129,7 @@ article {
    font-size: 18px;
    font-weight: 400;
 
-   /* overflow-wrap: break-word; 
-   Tried to use this but its only useful for long words, not longer sentencer. */
-   
+  
 
 }
 
@@ -157,13 +151,7 @@ article {
 .textbox-2 {
   font-size: 36px;
   font-weight:900;
-  background-color: var(--color);
-  flex: 2;
   text-align: center;
-}
-
-.article-2 {
-  flex-grow: 2;
 }
 
 /* Article 3 Layout and color */
@@ -179,18 +167,15 @@ article {
 
 .article-3 {
   background-color: var(--color);
-  flex-grow: 1;
-
 }
 span {
   color: var(--color2nd);
 }
 
-
-
 /* This is the section for the sign up box and text inside.
 1. Made it a flex to space it evenely.
-2. Outlined Sign  */
+2. Outlined Sign and gave it a small box shadow with a slight rounding on the radius
+3. Kept the max width small enough so it wouldn't be larger than 40% of its container  */
 .action-box {
   background-color: var(--color);
   display: flex;
@@ -218,3 +203,5 @@ footer {
   background-color: var(--color2nd);
 
 }
+
+
