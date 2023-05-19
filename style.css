@@ -1,0 +1,220 @@
+
+/* General Settings For All Elements
+- Setting box sizing to border box to set pad/margin with w/o adding to width. Reset and zero out margin/pad 
+- Made the main body a flex item and gave it a height
+- Removed styling from lists, changed to flex item, and added spacing
+- Removed all style and changed link color
+- Adgusted overall line spacing for text and increased margin
+- Made header and footer flex containers to center and align
+- Spaced out the images with margins on T&B
+- Made the body a flexbox so everything can be a flex item. I also made my main, 
+which i think i can actually get rid of, a flexbox so my remaining sections can be flex items.
+From there, I set the flex value at 1 1 0 for the items so they can automatically take up all the remainingg size.
+*/
+
+:root {
+  --color: #D9D0CB;
+  --color2nd: #A83145;
+  /* Chose this root color as a compliment for random SVG found online. Used color scheme to decide.  */
+}
+
+* {
+  box-sizing: border-box;
+  /* padding: 0; */
+  /* margin: 0; */
+  /* No need to add these as I already have border-box set. Cataloguing mistakes for learning.*/
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+
+}
+
+p {
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+  margin-right: 10px;
+}
+
+img {
+  height: 100px;
+  width: auto;
+  margin: 10px 50px;
+  
+}
+
+.burgerman {
+  border: none;
+  height: 300px;
+  width: auto;
+}
+
+.article-1, .article-2, .article-3, .article-4 {
+  padding: 40px;
+  
+}
+
+
+
+/* Navbar Section */
+
+/* 
+1. Placed navbox in its own container to be centered vs stretched to both ends
+2. Gave it a max width so it wouldn't stretch too far.
+3. Gave it a maximum height and then set the background
+4. Added margins to the left of the logo and right of the UL */
+
+.navbar {
+  background-color: var(--color2nd);
+}
+
+.navbox-center {
+  display: flex;
+  justify-content: space-around;
+  max-width: 90%;
+  align-items: center;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  height: 100px;
+}
+
+.logo {
+  font-size: 44px;
+  color: #f9faf8;
+  margin-left: 10px;
+}
+
+
+
+/* This is for the main content. */
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main{
+}
+
+article {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  
+}
+
+
+/* The First Section After Navigation */
+.article-1 {
+  background-color: var(--color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.textbox-1 > h1 {
+  font-size: 48px;
+  font-weight: 900;
+  background-color: var(--color);
+  margin-bottom: -10px;
+}
+
+.textbox-1 > p {
+  background-color: var(--color);
+   font-size: 18px;
+   font-weight: 400;
+
+   /* overflow-wrap: break-word; 
+   Tried to use this but its only useful for long words, not longer sentencer. */
+   
+
+}
+
+.button1 {
+  background-color: var(--color2nd);
+  color: #fff;
+  padding: 10px 32px;
+  border-radius: 4px ;
+  border: 1px solid #fff;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  text-align: center; 
+  font-weight: 700;
+}
+
+
+/* This is for Article 2 */
+.textbox-2 {
+  font-size: 36px;
+  font-weight:900;
+  background-color: var(--color);
+  flex: 2;
+  text-align: center;
+}
+
+.article-2 {
+  flex-grow: 2;
+}
+
+/* Article 3 Layout and color */
+.textbox-3 {
+  background-color: var(--color);
+  text-align: center;
+  font-size: 36px;
+  font-style: italic;
+  font-weight:100;
+  color: var(--color2nd);
+  min-width: 50%;
+}
+
+.article-3 {
+  background-color: var(--color);
+  flex-grow: 1;
+
+}
+span {
+  color: var(--color2nd);
+}
+
+
+
+/* This is the section for the sign up box and text inside.
+1. Made it a flex to space it evenely.
+2. Outlined Sign  */
+.action-box {
+  background-color: var(--color);
+  display: flex;
+  padding: 30px;
+  margin: 10px;
+  max-width: 40%;
+  border-radius: 8px;
+  box-shadow: 5px 5px 15px 6px var(--color2nd);
+  justify-content: space-evenly;
+}  
+
+.textbox-4 {
+  color: var(--color2nd);
+  margin-right: 20px;
+  padding: 0 10px 0 10px;
+}
+
+
+/* This is the footer and the final ection. */
+footer {
+  display: flex;
+  justify-content: center; 
+  color: white;  
+  font-size: 18px;
+  background-color: var(--color2nd);
+
+}

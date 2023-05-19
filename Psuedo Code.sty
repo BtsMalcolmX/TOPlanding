@@ -1,0 +1,43 @@
+Psuedo Code
+
+1. Boxes
+
+Navbar 
+    Logo
+    Unordered List
+/Navbar
+Article 1
+    TextBox1
+        Heading 1
+        Paragraph
+        Button
+    /TextBox1
+    Image/Placeholder
+Article 2
+    TextBox2
+        Heading 2
+        Images/Icons*5
+    /TextBox2
+Article 3
+    TextBox3
+        Paragraph w/inline span for bold
+    /TextBox3
+Article 4
+    ActionBox
+        TextBox4
+            Heading 3
+            Paragraph
+        /TextBox4 
+        Button
+Footer
+    Paragraph
+    
+
+
+Reminders:
+1. Body = Don't forget the 100vh height.
+2. Flex Item Children = Don't forget the flex basis which is base size
+3. We tell all items to be 100percent width, via flex-basis 
+.wrapper > * {
+  flex: 1 100%;
+}
